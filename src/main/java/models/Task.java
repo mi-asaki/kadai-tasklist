@@ -14,7 +14,7 @@ import jakarta.persistence.NamedQuery;
 @Entity
 @NamedQueries({
     @NamedQuery(
-        name = "getAllMTasks",
+        name = "getAllTasks",
         query = "SELECT m FROM Task AS m ORDER BY m.id DESC"
     )
 })
@@ -42,7 +42,7 @@ public class Task {
         this.id = id;
     }
 
-    String getContent() {
+    public String getContent() {
         return content;
     }
 
